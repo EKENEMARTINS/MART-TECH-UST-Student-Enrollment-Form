@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrolement Form</title>
+    <style>
+
+        body{
+
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)), 
+            url("MART-TECH UST logo 2.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 800px;
+            background-blend-mode: lighten;
+
+            border-radius: 10px;
+
+        }
+
+        .container{
+
+           width:50%; 
+           margin:40px auto; 
+           background: none; 
+           border-radius:8px; 
+           box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+            
+        }
+
+        .form-header{
+
+            background: #1e3a5f;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            border-radius: 8px 8px 0 0;
+
+        }
+
+        form{
+
+            padding: 25px;
+
+        }
+
+        fieldset{
+
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            background: none;
+
+        }
+
+        legend{
+
+            font-weight: bold;
+            padding: 0 10px;
+            
+        }
+
+        label{
+
+            display: block;
+            margin-top: 10px;
+            font-weight: 500;
+
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea{
+
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+
+        textarea{
+
+            resize: vertical;
+
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus{
+
+            outline: none;
+            border: 2px solid #2e8b57;
+            background: #f0fff5;
+
+        }
+
+        .radio-group{
+
+            margin-top: 8px;
+
+        }
+
+        .radio-group label{
+
+            display: inline;
+            margin-right: 15px;
+
+        }
+
+        .button{
+
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        input[type="submit"],
+        input[type="reset"]{
+
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 15px;
+            transition: 0.3s;
+
+        }
+
+        input[type="submit"]{
+
+            background: #2e8b57;
+            color: white;
+
+        }
+
+        input[type="submit"]:hover{
+
+            background: #246b45;
+
+        }
+
+        input[type="reset"]{
+
+            background: #d9534f;
+            color: white;
+
+        }
+
+        input[type="reset"]:hover{
+
+            background: #b52b27;
+
+        }
+
+        footer{
+
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            background: #1e3a5f;
+            color: #ddd;
+
+        }
+
+        .site-header{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: #1e3a5f;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+
+
+        }
+
+        .logo{
+
+            width: 150px;
+            height: auto;
+            margin-left: 20px;
+
+
+        }
+
+        .site-header h1{
+
+           font-size: 2.5rem;
+           margin-bottom: 5px;
+           font-weight: bold;
+           text-align: center;
+           line-height: 1.2;
+
+
+          
+
+        }
+
+        .site-header .motto-inline{
+
+            display: block;
+            font-size: 1rem;
+            font-style: italic;
+            color: gray;
+            margin-left: 10px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="site-header">
+        <img src="MART-TECH UST logo.png" alt="MART-TECH Logo" class="logo">
+        <h1>MART-TECH UNIVERSITY OF SCIENCE AND TECHNOLOGY
+            <span  class="motto-inline">Innovating Minds, Shaping Futures</span>
+        </h1>
+        
+    </div>
+    <div class="container">
+        <div class="form-header">
+            Student Enrolement Form
+        </div>
+
+        <form>
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+233 00 000 0000" maxlength="14" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+
+                <label for="course">Preferred Course</label>
+
+                <select id="course" name="course" required>
+                    <option value="">---Select a Course---</option>
+                    <optgroup label="Technology">
+                        <option value="webdev">Web Development</option>
+                        <option value="software">Software Engineering</option>
+                        <option value="data">Data Analysis</option>
+                        <option value="aiauto">AI Automation</option>
+                        <option value="cyber">Cybersecurity</option>
+                    </optgroup>
+
+                    <optgroup label="Business">
+                        <option value="business">Business Administraion</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="management">Management Studies</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="scl">Supply Chain and Logistics</option>
+                    </optgroup>
+                </select>
+
+                <label for="message">Why your choice of program?</label>
+                <textarea id="message" name="message" placeholder="Please share your thoughts..." rows="5" cols="40" required></textarea>
+
+                <label for="photo">Upload Profile Photo</label>
+                <input type="file" id="photo" name="photo" required>
+
+                <br><br>
+
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+                                
+            </fieldset>
+
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2026 Student Enrolment System | Built with HTML & CSS by Okoro Ekene Martins. All rights reserved </p>
+    </footer>
+
+</body>
+</html>
